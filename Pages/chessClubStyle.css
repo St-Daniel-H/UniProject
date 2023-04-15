@@ -1,0 +1,20 @@
+#backGroundContainer{
+    margin:auto;
+    padding:10px;
+    height:350px;
+    width:100%;
+    max-width:1100px;
+    margin-top:130px;
+}
+#chessClubBody{
+    margin:auto;
+}
+#backGround{
+    background-image: URL("../images/chessClubBg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+}

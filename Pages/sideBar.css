@@ -1,0 +1,17 @@
+*{
+    margin:0;
+    padding:0;
+    }
+    a, a:hover, a:focus, a:active {
+        text-decoration: none;
+        color: inherit;
+    }
+    
+#activeSideBar{
+    background-color: blue;
+    border: 2px solid red;
+    color:white;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    width:100%;
+}
