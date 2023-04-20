@@ -26,6 +26,15 @@ var now = new Date();
 console.log(dateFormater(now, "/"));
 let myLibrary = [
   {
+    name: "Daniel",
+    picture: "",
+    id: 130,
+    time: "16/20/2022",
+    message: "hey everbdoy",
+  },
+  {
+    name: "Rami",
+    picture: "",
     id: 12,
     time: "12/2/2021",
     message: "hey",
@@ -34,8 +43,14 @@ let myLibrary = [
 var list = document.createElement("ul");
 document.getElementById("renderContent").appendChild(list);
 list.setAttribute("id", "list");
-function announcement(message, time, key) {
-  (this.message = message), (this.time = time), (this.id = key);
+class announcement {
+  constructor(picture, name, message, time, key) {
+    (this.name = name),
+      (this.picture = picture),
+      (this.message = message),
+      (this.time = time),
+      (this.id = key);
+  }
 }
 const remove = (key) => {
   console.log(key);
@@ -48,50 +63,56 @@ const remove = (key) => {
   myLibrary.splice(indexOfObject, 1);
   console.log(myLibrary);
 };
+function mapContent() {
+  list.innerHTML = myLibrary
+    .map((announcement, key) => {
+      if (announcement.name == "Daniel") {
+        console.log("name: " + announcement.name);
+        return (
+          "<li id=" +
+          key +
+          " class ='messageCard'><div  class='messageCardinfo'><div class='messageCardleft'><img class='cardImage' src='../../images/userProfilePicture.png'></div><div class='messageCardright'><h3>" +
+          announcement.name +
+          "</h3><p>" +
+          announcement.time +
+          "</p></div><div id='delete'><button onClick='remove(" +
+          key +
+          ")' id='deleteButton'><i class='fa-solid fa-x'></i></button></div></div><div class='messageCardmessage'>" +
+          announcement.message +
+          "</div></li>"
+        );
+      } else {
+        return (
+          "<li id=" +
+          key +
+          " class ='messageCard'><div  class='messageCardinfo'><div class='messageCardleft'><img class='cardImage' src='../../images/userProfilePicture.png'></div><div class='messageCardright'><h3>" +
+          announcement.name +
+          "</h3><p>" +
+          announcement.time +
+          "</p></div></div><div class='messageCardmessage'>" +
+          announcement.message +
+          "</div></;>"
+        );
+      }
+    })
+    .join("");
+}
 
-list.innerHTML = myLibrary
-  .map((announcement, key) => {
-    return (
-      "<div id=" +
-      key +
-      " class ='messageCard'><div class='messageCardinfo'><div class='messageCardleft'><img class='cardImage' src='../../images/userProfilePicture.png'></div><div class='messageCardright'><h3>" +
-      "daniel" +
-      "</h3><p>" +
-      announcement.time +
-      "</p></div></div><div class='messageCardmessage'>" +
-      announcement.message +
-      "</div></div>"
-    );
-  })
-  .join("");
+mapContent(); //first render
 function createBook() {
   let messageValue = document.getElementById("messageInput").value;
   var time = new Date();
   if (messageValue != "") {
     console.log("hi");
     let newAnnouncement = new announcement(
+      "picutre",
+      "Daniel",
       messageValue,
       dateFormater(time, "/")
     );
     console.log(newAnnouncement.message);
     myLibrary.unshift(newAnnouncement);
-
-    list.innerHTML = myLibrary
-      .map((announcement, key) => {
-        return (
-          "<div id=" +
-          key +
-          " class ='messageCard'><div  class='messageCardinfo'><div class='messageCardleft'><img class='cardImage' src='../../images/userProfilePicture.png'></div><div class='messageCardright'><h3>" +
-          "daniel" +
-          "</h3><p>" +
-          announcement.time +
-          "</p></div></div><div class='messageCardmessage'>" +
-          announcement.message +
-          "</div></div>"
-        );
-      })
-      .join("");
-
+    mapContent();
     document.getElementById("messageInput").value = "";
     console.log(myLibrary);
   } else return;

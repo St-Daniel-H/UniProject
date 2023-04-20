@@ -88,9 +88,7 @@
         font-size: 20px;
         cursor: pointer;
     }
-    .switch:not(:last-child){
-        margin-left:500px;
-    }
+   
     .switchOption:hover:not(#switchActive){
         color: blue;
         background-color: #f3f2f2;
@@ -111,7 +109,6 @@
             top:95px;
             text-align: center;
             width:250px;
-            margin-left:10px;
         }
         #topBar{
             height:115px;

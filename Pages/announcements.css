@@ -5,7 +5,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left:20px;
     border-radius: 25px;
     padding:20px;
     -webkit-box-shadow: -1px 0 9.5px 6.5px #dddddd;
@@ -24,6 +23,7 @@
     color: blue;
     
 }
+
 #sendAnnouncementButton{
     background-color:  rgb(237, 235, 235);
     border:none;
@@ -40,6 +40,7 @@
 }
 .messageCardinfo{
     display:flex;
+     position: relative;
 }
 .messageCardright{
     margin-left:10px;
@@ -52,4 +53,18 @@
     height:50px;
     width:50px;
     border-radius: 50%;
+}
+#deleteButton{
+    position: absolute;
+    top:0;
+    right:0;
+    border:none;
+}
+#deleteButton:hover{
+    color:blue;
+}
+#renderContent ul {
+    padding: 0;
+
+    list-style-type: none;
 }
