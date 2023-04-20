@@ -70,8 +70,10 @@
         transform: translate(-50%, -50%);
         display: flex;
         height:100%;
+        margin-bottom:2px;
     }
     #switchActive{
+        margin-bottom:0px;
         border-bottom:2px solid blue;
         color:blue;
         height:100%;
@@ -86,8 +88,12 @@
         font-size: 20px;
         cursor: pointer;
     }
-    .switchOption:hover{
+    .switch:not(:last-child){
+        margin-left:500px;
+    }
+    .switchOption:hover:not(#switchActive){
         color: blue;
+        background-color: #f3f2f2;
     }
     
     @media only screen and (max-width: 830px){
