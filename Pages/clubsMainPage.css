@@ -9,15 +9,6 @@
 #chessClubBody{
     margin:auto;
 }
-#backGround{
-    background-image: URL("../../images/chessClubBg.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 10px;
-    height: 100%;
-    width: 100%;
-}
 #chessClubRightLeftContainer{
     margin:auto;
     width: 100%;
@@ -44,4 +35,9 @@ input[type=text]{
     #leftSide{
         display:none;
     }
+}
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    
 }

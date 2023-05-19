@@ -79,7 +79,9 @@
         height:100%;
     }
     .switchOption{
-        border-bottom:2px solid white;
+        color:black;
+        text-decoration: none;
+        margin-bottom:2px;
         height: 100%;
         display: flex;
         align-items: center;
@@ -88,13 +90,16 @@
         font-size: 20px;
         cursor: pointer;
     }
-   
+    #switch a {
+        text-decoration: none;
+        color: inherit;
+    }
     .switchOption:hover:not(#switchActive){
         color: blue;
         background-color: #f3f2f2;
     }
     
-    @media only screen and (max-width: 830px){
+    @media only screen and (max-width: 850px){
         #switch{
             top:90px;
             text-align: center;
@@ -108,9 +113,12 @@
         #switch{
             top:95px;
             text-align: center;
-            width:250px;
+            
         }
         #topBar{
             height:115px;
+        }
+        #userProfileImg{
+            margin-right:20px;
         }
     }

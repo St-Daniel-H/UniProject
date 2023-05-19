@@ -1,0 +1,9 @@
+#peopleList{
+    margin:150px auto 0 auto;
+    max-width: 1000px;
+}
+.userImageList{
+    height:32px;
+    width:32px;
+    border-radius: 50%;
+}

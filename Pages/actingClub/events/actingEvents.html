@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+        <title>MusicClub Events</title>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="../../sideTopBarClubs.css">
+        <link rel="stylesheet" href="../../sideBar.css">
+        <link rel="stylesheet" href="../../announcements.css">
+        <link rel="stylesheet" href="../../chessClub/events/events.css">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+            crossorigin="anonymous"
+        >
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        >
+    </head>
+    <body>
+        <!-- top bar -->
+        <div id="topBar">
+            <div id="burgerAndLogo">
+                <button
+                    id="Burger"
+                    class="btn btn-primary"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasWithBothOptions"
+                    aria-controls="offcanvasWithBothOptions"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <!-- start off canvaes -->
+                <div
+                    class="offcanvas offcanvas-start"
+                    data-bs-scroll="true"
+                    tabindex="-1"
+                    id="offcanvasWithBothOptions"
+                    aria-labelledby="offcanvasWithBothOptionsLabel"
+                >
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+                            <span style="color: blue">L</span>
+                            <span style="color: red">I</span>
+                            <span style="color: green">U</span>
+                            <span style="color: rgb(110, 110, 110)"> Club House</span>
+                        </h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="offcanvas"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div id="drawer" class="offcanvas-body">
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-house"></i>
+                                &nbsp;
+                                <a href="../../mainPage/index.html">Classes</a>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-calendar-days"></i>
+                                &nbsp;Calender
+                            </li>
+                            <hr>
+                            <p>enrolled</p>
+                            <li>
+                                <i class="fa-solid fa-chess"></i>
+                                &nbsp;
+                                <a href="../../chessClub/main/chessClub.html"></a>
+                                Chess Club
+                            </li>
+                            <li id="activeSideBar">
+                                <i class="fa-solid fa-music"></i>
+                                &nbsp;
+                                <a> Music Club</a>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-masks-theater"></i>
+                                &nbsp;
+                                <a href="./actingClub.html">
+                                    Acting and Theatre Club
+                                </a>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-camera-retro"></i>
+                                &nbsp;
+                                <a href="./photographyClub.html"> Photography Club</a>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-gamepad"></i>
+                                &nbsp;
+                                <a href="./gamingClub.html">Gaming Club</a>
+                            </li>
+                            <hr>
+                            <li>
+                                <i class="fa-solid fa-box-archive"></i>
+                                &nbsp;Archieved Classes
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-gear"></i>
+                                &nbsp;Settings
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- end off canvaes -->
+                <h2>
+                    <span style="color: blue">L</span>
+                    <span style="color: red">I</span>
+                    <span style="color: green">U</span>
+                    <span style="color: rgb(110, 110, 110)"> Chess Club</span>
+                </h2>
+            </div>
+            <div id="switch">
+                <h4 class="switchOption">
+                    <a href="../main/actingMain.html">Stream</a>
+                </h4>
+                <h4 id="switchActive" style="margin-left: 50px" class="switchOption">
+                    &nbsp;
+                    <a>Events</a>
+                </h4>
+                <h4 style="margin-left: 50px" class="switchOption">
+                    &nbsp;
+                    <a href="../people/actingPeople.html">People</a>
+                </h4>
+            </div>
+            <img id="userProfileImg" src="../../../images/userProfilePicture.png">
+        </div>
+        <!-- end top bar -->
+        <!-- Example Code -->
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="false"
+                        aria-controls="collapseOne"
+                    >
+                        Theatrical Showcase
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>Theatrical Showcase</strong>
+                        The Theatrical Showcase is a three-day extravaganza celebrating the art of acting. Featuring a diverse range of performances, from classic plays to avant-garde experimental theater, this event showcases the talents of both established actors and emerging stars. Witness powerful monologues, captivating ensemble pieces, and thought-provoking dramas that will transport you into the realm of imagination. Whether you're a theater enthusiast or a casual observer, the Theatrical Showcase promises an unforgettable experience.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                    >
+                        Improv Comedy Night
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>Improv Comedy Night</strong>
+                        Get ready for an evening of laughter and spontaneity at the Improv Comedy Night. This event brings together a talented ensemble of improvisational actors who will have you in stitches with their quick wit and hilarious skits. From improvised scenes to audience participation games, every moment is unpredictable and uproariously funny. Sit back, relax, and let the comedic genius of these actors create a night of pure entertainment that will leave you grinning from ear to ear.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                    >
+                        Shakespeare in the Park
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>Shakespeare in the Park</strong>
+                        Experience the timeless works of William Shakespeare in the enchanting setting of a park. Shakespeare in the Park is an annual event that showcases the Bard's most beloved plays performed by a skilled troupe of actors. From the tragic tales of Romeo and Juliet to the comedic romps of A Midsummer Night's Dream, immerse yourself in the beauty of Shakespeare's language and the artistry of the performers. Bring a picnic blanket, gather with friends and family, and revel in the magic of these unforgettable performances.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                    >
+                        One-Act Play Festival
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>One-Act Play Festival</strong>
+                        The One-Act Play Festival is a celebration of concise and impactful storytelling. This event presents a series of short plays, each lasting no more than 30 minutes, allowing audiences to experience a diverse range of narratives in a single evening. From poignant dramas to lighthearted comedies, these one-act plays delve into the human condition and offer a snapshot of life's complexities. Prepare to be moved, entertained, and intellectually stimulated as the talented actors bring these compelling stories to life.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFive"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                    >
+                        Musical Theater Spectacular
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>Musical Theater Spectacular</strong>
+                        Experience the magic of Broadway in a thrilling Musical Theater Spectacular. This event showcases the best of musical theater, featuring showstopping numbers from iconic productions. Talented actors belt out beloved songs, dance with precision and grace, and transport you into the world of musical storytelling. From the razzle-dazzle of big ensemble numbers to the heart-wrenching ballads, this event is a celebration of the extraordinary talent and craftsmanship that goes into bringing musicals to life.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseSix"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                    >
+                        Performance Art Exhibition
+                    </button>
+                </h2>
+                <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>Performance Art Exhibition</strong>
+                        Pushing the boundaries of traditional theater, the Experimental Performance Art Exhibition is a groundbreaking event that blurs the lines between acting, visual arts, and immersive experiences. Witness avant-garde performances that challenge conventions and provoke thought. Actors engage with audiences in unconventional ways, creating interactive and thought-provoking encounters. Prepare to have your perceptions challenged and your senses stimulated in this innovative exploration of the possibilities of live performance.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Example Code -->
+    </body>
+</html>

@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+        <title>MusicClub Events</title>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="../../sideTopBarClubs.css">
+        <link rel="stylesheet" href="../../sideBar.css">
+        <link rel="stylesheet" href="../../announcements.css">
+        <link rel="stylesheet" href="../../chessClub/events/events.css">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+            crossorigin="anonymous"
+        >
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        >
+    </head>
+    <body>
+        <!-- top bar -->
+        <div id="topBar">
+            <div id="burgerAndLogo">
+                <button
+                    id="Burger"
+                    class="btn btn-primary"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasWithBothOptions"
+                    aria-controls="offcanvasWithBothOptions"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <!-- start off canvaes -->
+                <div
+                    class="offcanvas offcanvas-start"
+                    data-bs-scroll="true"
+                    tabindex="-1"
+                    id="offcanvasWithBothOptions"
+                    aria-labelledby="offcanvasWithBothOptionsLabel"
+                >
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+                            <span style="color: blue">L</span>
+                            <span style="color: red">I</span>
+                            <span style="color: green">U</span>
+                            <span style="color: rgb(110, 110, 110)"> Club House</span>
+                        </h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="offcanvas"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div id="drawer" class="offcanvas-body">
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-house"></i>
+                                &nbsp;
+                                <a href="../../mainPage/index.html">Classes</a>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-calendar-days"></i>
+                                &nbsp;Calender
+                            </li>
+                            <hr>
+                            <p>enrolled</p>
+                            <li>
+                                <i class="fa-solid fa-chess"></i>
+                                &nbsp;
+                                <a href="../../chessClub/main/chessClub.html"></a>
+                                Chess Club
+                            </li>
+                            <li id="activeSideBar">
+                                <i class="fa-solid fa-music"></i>
+                                &nbsp;
+                                <a> Music Club</a>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-masks-theater"></i>
+                                &nbsp;
+                                <a href="./actingClub.html">
+                                    Acting and Theatre Club
+                                </a>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-camera-retro"></i>
+                                &nbsp;
+                                <a href="./photographyClub.html"> Photography Club</a>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-gamepad"></i>
+                                &nbsp;
+                                <a href="./gamingClub.html">Gaming Club</a>
+                            </li>
+                            <hr>
+                            <li>
+                                <i class="fa-solid fa-box-archive"></i>
+                                &nbsp;Archieved Classes
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-gear"></i>
+                                &nbsp;Settings
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- end off canvaes -->
+                <h2>
+                    <span style="color: blue">L</span>
+                    <span style="color: red">I</span>
+                    <span style="color: green">U</span>
+                    <span style="color: rgb(110, 110, 110)"> Chess Club</span>
+                </h2>
+            </div>
+            <div id="switch">
+                <h4 class="switchOption">
+                    <a href="../main/musicMain.html">Stream</a>
+                </h4>
+                <h4 id="switchActive" style="margin-left: 50px" class="switchOption">
+                    &nbsp;
+                    <a>Events</a>
+                </h4>
+                <h4 style="margin-left: 50px" class="switchOption">
+                    &nbsp;
+                    <a href="../people/musicPeople.html">People</a>
+                </h4>
+            </div>
+            <img id="userProfileImg" src="../../../images/userProfilePicture.png">
+        </div>
+        <!-- end top bar -->
+        <!-- Example Code -->
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="false"
+                        aria-controls="collapseOne"
+                    >
+                        Harmony Festival
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>Harmony Festival</strong>
+                        The Harmony Festival is a three-day celebration of music that showcases a diverse range of genres. From indie rock to electronic dance music, this festival caters to all music lovers. Attendees can enjoy performances from renowned artists, discover emerging talents, and immerse themselves in the vibrant atmosphere. With multiple stages, art installations, and food vendors, the Harmony Festival promises an unforgettable experience for music enthusiasts of all ages.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                    >
+                        Jazz Under the Stars
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>Jazz Under the Stars</strong>
+                        Jazz Under the Stars is an enchanting outdoor concert held in a picturesque park. Set against a backdrop of twinkling stars and soothing moonlight, this event features a lineup of world-class jazz musicians. From soulful melodies to upbeat rhythms, the performers captivate the audience with their improvisation and virtuosity. Grab a blanket, sit back, and let the smooth tunes transport you to a realm of pure musical bliss.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                    >
+                        ElectroGroove Night
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>ElectroGroove Night</strong>
+                        Get ready to dance the night away at ElectroGroove Night, a pulsating extravaganza of electronic music. This event showcases cutting-edge DJs and producers, who will take you on a sonic journey through a fusion of genres like techno, house, and drum and bass. The venue will be transformed into a mesmerizing visual spectacle with vibrant light displays and mind-bending visuals, creating an electrifying atmosphere that will leave you craving for more.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                    >
+                        Acoustic Bliss Retreat
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>Acoustic Bliss Retreat</strong>
+                        Escape the hustle and bustle of everyday life and immerse yourself in the serene melodies of the Acoustic Bliss Retreat. Held in a tranquil countryside setting, this intimate gathering focuses on unplugged performances, featuring singer-songwriters and acoustic bands. Relax by the campfire, connect with like-minded music enthusiasts, and let the soothing sounds of acoustic guitars and heartfelt lyrics wash over you. It's an ideal getaway for those seeking a peaceful and introspective musical experience.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFive"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                    >
+                        Rocktoberfest
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>Rocktoberfest</strong>
+                        Celebrate Halloween with a thunderous bang at Rocktoberfest! This high-energy rock festival brings together headbangers, moshers, and lovers of all things heavy. With an impressive lineup of hard rock and metal bands, the event promises electrifying performances, intense guitar solos, and raucous stage presence. Don your wildest costumes, embrace the rock 'n' roll spirit, and prepare for a night of headbanging and fist-pumping anthems that will make your heart race.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseSix"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                    >
+                        World Rhythms Fusion
+                    </button>
+                </h2>
+                <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>World Rhythms Fusion</strong>
+                        Experience the mesmerizing fusion of global rhythms at World Rhythms Fusion. This event celebrates the rich diversity of music from around the world, blending traditional sounds with contemporary beats. From African drums to Indian sitars, from Latin percussion to Middle Eastern ouds, the stage comes alive with a tapestry of cultural influences. Indulge in a sonic adventure that transcends borders and immerses you in the captivating rhythms of different cultures.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Example Code -->
+    </body>
+</html>

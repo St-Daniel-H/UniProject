@@ -3,10 +3,14 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>LIU Club House</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="sideBar.css">
-        <link rel="stylesheet" href="sideTopBar.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+        <title>MusicClub People</title>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="../../sideTopBarClubs.css">
+        <link rel="stylesheet" href="../../sideBar.css">
+        <link rel="stylesheet" href="../../announcements.css">
+        <link rel="stylesheet" href="../../chessClub/people/people.css">
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
             rel="stylesheet"
@@ -20,9 +24,9 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         >
-        <script src="https://kit.fontawesome.com/e46ff3aebe.js" crossorigin="anonymous"></script>
     </head>
     <body>
+        <!-- top bar -->
         <div id="topBar">
             <div id="burgerAndLogo">
                 <button
@@ -35,6 +39,7 @@
                 >
                     <i class="fa-solid fa-bars"></i>
                 </button>
+                <!-- start off canvaes -->
                 <div
                     class="offcanvas offcanvas-start"
                     data-bs-scroll="true"
@@ -58,9 +63,10 @@
                     </div>
                     <div id="drawer" class="offcanvas-body">
                         <ul>
-                            <li id="activeSideBar">
+                            <li>
                                 <i class="fa-solid fa-house"></i>
-                                &nbsp;Class
+                                &nbsp;
+                                <a href="../../mainPage/index.html">Classes</a>
                             </li>
                             <li>
                                 <i class="fa-solid fa-calendar-days"></i>
@@ -68,15 +74,16 @@
                             </li>
                             <hr>
                             <p>enrolled</p>
-                            <li>
+                            <li id="activeSideBar">
                                 <i class="fa-solid fa-chess"></i>
                                 &nbsp;
-                                <a href="./chessClub/chessClub.html">Chess Club</a>
+                                <a href="../../chessClub/main/chessClub.html"></a>
+                                Chess Club
                             </li>
                             <li>
                                 <i class="fa-solid fa-music"></i>
                                 &nbsp;
-                                <a href="./musicClub.html"> Music Club</a>
+                                <a href="../main/musicMain.html"> Music Club</a>
                             </li>
                             <li>
                                 <i class="fa-solid fa-masks-theater"></i>
@@ -107,60 +114,89 @@
                         </ul>
                     </div>
                 </div>
+                <!-- end off canvaes -->
                 <h2>
                     <span style="color: blue">L</span>
                     <span style="color: red">I</span>
                     <span style="color: green">U</span>
-                    <span style="color: rgb(110, 110, 110)"> Club House</span>
+                    <span style="color: rgb(110, 110, 110)"> Chess Club</span>
                 </h2>
             </div>
-            <img id="userProfileImg" src="../images/userProfilePicture.png">
-        </div>
-        <div id="indexBody">
-            <div id="indexBodyGridContainer">
-                <div class="card" style="width: 25rem;">
-                    <img src="../images/chessClubBg.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Chess Club</h5>
-                        <p class="card-text">Join our friendly chess club for all levels! Improve your skills, play, and have fun with a supportive community of players</p>
-                        <a href="#" class="btn btn-primary">Visit</a>
-                    </div>
-                </div>
-                <div class="card" style="width: 25rem;">
-                    <img src="../images/actingClubBg.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Acting Club</h5>
-                        <p class="card-text">Join our acting club to hone your craft, practice scenes, and perform in a supportive and creative environment. All experience levels welcome!</p>
-                        <a href="#" class="btn btn-primary">Visit</a>
-                    </div>
-                </div>
-                <div class="card" style="width: 25rem;">
-                    <img src="../images/gamingClubBg.webp" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Gaming Club</h5>
-                        <p class="card-text">Join our gaming club for fun, competition, and community. Play a variety of games with fellow gamers.</p>
-                        <a href="#" class="btn btn-primary">Visit</a>
-                    </div>
-                </div>
-                <div class="card" style="width: 25rem;">
-                    <img src="../images/musicClubbg.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Music Club</h5>
-                        <p class="card-text">Join our music club for jam sessions, performances, and music appreciation. All skill levels welcome!.</p>
-                        <a href="#" class="btn btn-primary">Visit</a>
-                    </div>
-                </div>
-                <div class="card" style="width: 25rem;">
-                    <img src="../images/photoClubBg.webp" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Photography Club</h5>
-                        <p class="card-text">Join our photography club to learn and improve your photography skills, share your work, and explore new techniques.</p>
-                        <a href="#" class="btn btn-primary">Visit</a>
-                    </div>
-                </div>
+            <div id="switch">
+                <h4 class="switchOption">
+                    <a href="../main/actingMain.html">Stream</a>
+                </h4>
+                <h4 style="margin-left: 50px" class="switchOption">
+                    &nbsp;
+                    <a href="../events/actingEvents.html">Events</a>
+                </h4>
+                <h4 id="switchActive" style="margin-left: 50px" class="switchOption">
+                    &nbsp;
+                    <a>People</a>
+                </h4>
             </div>
+            <img id="userProfileImg" src="../../../images/userProfilePicture.png">
         </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-</body>
+        <!-- end top bar -->
+        <ul id="peopleList" class="list-group">
+            <li class="list-group-item">
+                <h2>President</h2>
+            </li>
+            <li class="list-group-item">
+                <img class="userImageList" src="../../../images/user1.jpg">
+                &nbsp;Hassan
+            </li>
+            <li class="list-group-item">
+                <h2>Members</h2>
+            </li>
+            <li class="list-group-item">
+                <img class="userImageList" src="../../../images/user2.jpg">
+                &nbsp;Chris
+            </li>
+            <li class="list-group-item">
+                <img class="userImageList" src="../../../images/user3.jpg">
+                &nbsp;Daniel
+            </li>
+            <li class="list-group-item">
+                <img class="userImageList" src="../../../images/user4.jpg">
+                &nbsp;Mhammad
+            </li>
+            <li class="list-group-item">
+                <img class="userImageList" src="../../../images/user5.jpg">
+                &nbsp;Houssam
+            </li>
+            <li class="list-group-item">
+                <img class="userImageList" src="../../../images/user2.jpg">
+                &nbsp;Chris
+            </li>
+            <li class="list-group-item">
+                <img class="userImageList" src="../../../images/user3.jpg">
+                &nbsp;Daniel
+            </li>
+            <li class="list-group-item">
+                <img class="userImageList" src="../../../images/user4.jpg">
+                &nbsp;Mhammad
+            </li>
+            <li class="list-group-item">
+                <img class="userImageList" src="../../../images/user5.jpg">
+                &nbsp;Houssam
+            </li>
+            <li class="list-group-item">
+                <img class="userImageList" src="../../../images/user2.jpg">
+                &nbsp;Chris
+            </li>
+            <li class="list-group-item">
+                <img class="userImageList" src="../../../images/user3.jpg">
+                &nbsp;Daniel
+            </li>
+            <li class="list-group-item">
+                <img class="userImageList" src="../../../images/user4.jpg">
+                &nbsp;Mhammad
+            </li>
+            <li class="list-group-item">
+                <img class="userImageList" src="../../../images/user5.jpg">
+                &nbsp;Houssam
+            </li>
+        </ul>
+    </body>
 </html>

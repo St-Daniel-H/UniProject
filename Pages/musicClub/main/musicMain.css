@@ -1,0 +1,9 @@
+#backGround{
+    background-image: URL("../../../images/musicClubbg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+}

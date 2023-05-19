@@ -24,22 +24,7 @@ function dateFormater(date, separator) {
 
 var now = new Date();
 console.log(dateFormater(now, "/"));
-let myLibrary = [
-  {
-    name: "Daniel",
-    picture: "",
-    id: 130,
-    time: "16/20/2022",
-    message: "hey everbdoy",
-  },
-  {
-    name: "Rami",
-    picture: "",
-    id: 12,
-    time: "12/2/2021",
-    message: "hey",
-  },
-];
+let myLibrary = [];
 var list = document.createElement("ul");
 document.getElementById("renderContent").appendChild(list);
 list.setAttribute("id", "list");
@@ -50,10 +35,10 @@ class announcement {
       (this.message = message),
       (this.time = time),
       (this.id = key);
+    console.log("key " + key);
   }
 }
 const remove = (key) => {
-  console.log(key);
   var a = document.getElementById("list");
   var item = document.getElementById(key);
   a.removeChild(item);
@@ -69,9 +54,11 @@ function mapContent() {
       if (announcement.name == "Daniel") {
         console.log("name: " + announcement.name);
         return (
-          "<li id=" +
-          key +
-          " class ='messageCard'><div  class='messageCardinfo'><div class='messageCardleft'><img class='cardImage' src='../../images/userProfilePicture.png'></div><div class='messageCardright'><h3>" +
+          "<li key=" +
+          announcement.id +
+          " id=" +
+          announcement.id +
+          " class ='messageCard'><div  class='messageCardinfo'><div class='messageCardleft'><img class='cardImage' src='../../../images/userProfilePicture.png'></div><div class='messageCardright'><h3>" +
           announcement.name +
           "</h3><p>" +
           announcement.time +
@@ -84,8 +71,8 @@ function mapContent() {
       } else {
         return (
           "<li id=" +
-          key +
-          " class ='messageCard'><div  class='messageCardinfo'><div class='messageCardleft'><img class='cardImage' src='../../images/userProfilePicture.png'></div><div class='messageCardright'><h3>" +
+          announcement.id +
+          " class ='messageCard'><div  class='messageCardinfo'><div class='messageCardleft'><img class='cardImage' src='../../../images/userProfilePicture.png'></div><div class='messageCardright'><h3>" +
           announcement.name +
           "</h3><p>" +
           announcement.time +
@@ -95,6 +82,7 @@ function mapContent() {
         );
       }
     })
+    .reverse()
     .join("");
 }
 
@@ -103,15 +91,14 @@ function createBook() {
   let messageValue = document.getElementById("messageInput").value;
   var time = new Date();
   if (messageValue != "") {
-    console.log("hi");
     let newAnnouncement = new announcement(
       "picutre",
       "Daniel",
       messageValue,
-      dateFormater(time, "/")
+      dateFormater(time, "/"),
+      (key = myLibrary.length)
     );
-    console.log(newAnnouncement.message);
-    myLibrary.unshift(newAnnouncement);
+    myLibrary.push(newAnnouncement);
     mapContent();
     document.getElementById("messageInput").value = "";
     console.log(myLibrary);
