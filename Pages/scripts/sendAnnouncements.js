@@ -36,51 +36,56 @@ class announcement {
       (this.time = time),
       (this.id = key);
     console.log("key " + key);
+    this.removed = false;
   }
 }
 const remove = (key) => {
   var a = document.getElementById("list");
   var item = document.getElementById(key);
-  a.removeChild(item);
+  item.classList.add("hidden");
+  // item.removed = true;
   const indexOfObject = myLibrary.findIndex((object) => {
     return object.id === key;
   });
-  myLibrary.splice(indexOfObject, 1);
-  console.log(myLibrary);
+  myLibrary[indexOfObject].removed = true;
+  // myLibrary.splice(indexOfObject, 1);
+  // console.log(myLibrary);
 };
 function mapContent() {
   list.innerHTML = myLibrary
     .map((announcement, key) => {
-      if (announcement.name == "Daniel") {
-        console.log("name: " + announcement.name);
-        return (
-          "<li key=" +
-          announcement.id +
-          " id=" +
-          announcement.id +
-          " class ='messageCard'><div  class='messageCardinfo'><div class='messageCardleft'><img class='cardImage' src='../../../images/userProfilePicture.png'></div><div class='messageCardright'><h3>" +
-          announcement.name +
-          "</h3><p>" +
-          announcement.time +
-          "</p></div><div id='delete'><button onClick='remove(" +
-          key +
-          ")' id='deleteButton'><i class='fa-solid fa-x'></i></button></div></div><div class='messageCardmessage'>" +
-          announcement.message +
-          "</div></li>"
-        );
-      } else {
-        return (
-          "<li id=" +
-          announcement.id +
-          " class ='messageCard'><div  class='messageCardinfo'><div class='messageCardleft'><img class='cardImage' src='../../../images/userProfilePicture.png'></div><div class='messageCardright'><h3>" +
-          announcement.name +
-          "</h3><p>" +
-          announcement.time +
-          "</p></div></div><div class='messageCardmessage'>" +
-          announcement.message +
-          "</div></;>"
-        );
-      }
+      if (announcement.removed == false) {
+        if (announcement.name == "Daniel") {
+          console.log("name: " + announcement.name);
+          return (
+            "<li key=" +
+            announcement.id +
+            " id=" +
+            announcement.id +
+            " class ='messageCard'><div  class='messageCardinfo'><div class='messageCardleft'><img class='cardImage' src='../../../images/userProfilePicture.png'></div><div class='messageCardright'><h3>" +
+            announcement.name +
+            "</h3><p>" +
+            announcement.time +
+            "</p></div><div id='delete'><button onClick='remove(" +
+            key +
+            ")' id='deleteButton'><i class='fa-solid fa-x'></i></button></div></div><div class='messageCardmessage'>" +
+            announcement.message +
+            "</div></li>"
+          );
+        } else {
+          return (
+            "<li id=" +
+            announcement.id +
+            " class ='messageCard'><div  class='messageCardinfo'><div class='messageCardleft'><img class='cardImage' src='../../../images/userProfilePicture.png'></div><div class='messageCardright'><h3>" +
+            announcement.name +
+            "</h3><p>" +
+            announcement.time +
+            "</p></div></div><div class='messageCardmessage'>" +
+            announcement.message +
+            "</div></;>"
+          );
+        }
+      } else return;
     })
     .reverse()
     .join("");

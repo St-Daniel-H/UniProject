@@ -3,14 +3,13 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-        <title>ChessClub People</title>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+        <title>Ches Club</title>
+        <!-- <link rel="stylesheet" href="style.css"> -->
         <link rel="stylesheet" href="../../sideTopBarClubs.css">
         <link rel="stylesheet" href="../../sideBar.css">
+        <link rel="stylesheet" href="gamingMain.css">
         <link rel="stylesheet" href="../../announcements.css">
-        <link rel="stylesheet" href="people.css">
+        <link rel="stylesheet" href="../../clubsMainPage.css">
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
             rel="stylesheet"
@@ -24,6 +23,7 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         >
+        <script src="https://kit.fontawesome.com/e46ff3aebe.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <!-- top bar -->
@@ -74,11 +74,10 @@
                             </li>
                             <hr>
                             <p>enrolled</p>
-                            <li id="activeSideBar">
+                            <li>
                                 <i class="fa-solid fa-chess"></i>
                                 &nbsp;
-                                <a href="../../chessClub/main/chessClub.html"></a>
-                                Chess Club
+                                <a href="../../chessClub/main/chessClub.html">Chess Club</a>
                             </li>
                             <li>
                                 <i class="fa-solid fa-music"></i>
@@ -97,7 +96,7 @@
                                 &nbsp;
                                 <a href="../../photoClub/main/photoMain.html"> Photography Club</a>
                             </li>
-                            <li>
+                            <li id="activeSideBar">
                                 <i class="fa-solid fa-gamepad"></i>
                                 &nbsp;
                                 <a href="../../gamingClub/main/gamingMain.html">Gaming Club</a>
@@ -123,48 +122,44 @@
                 </h2>
             </div>
             <div id="switch">
-                <h4 class="switchOption">
-                    <a href="../main/chessClub.html">Stream</a>
+                <h4 id="switchActive" class="switchOption">
+                    <a>Stream</a>
                 </h4>
                 <h4 style="margin-left: 50px" class="switchOption">
                     &nbsp;
-                    <a href="../events/events.html">Events</a>
+                    <a href="../events/gamingEvents.html">Events</a>
                 </h4>
-                <h4 id="switchActive" style="margin-left: 50px" class="switchOption">
+                <h4 style="margin-left: 50px" class="switchOption">
                     &nbsp;
-                    <a>People</a>
+                    <a href="../people/gamingPeople.html">People</a>
                 </h4>
             </div>
             <img id="userProfileImg" src="../../../images/userProfilePicture.png">
         </div>
         <!-- end top bar -->
-        <ul id="peopleList" class="list-group">
-            <li class="list-group-item">
-                <h2>President</h2>
-            </li>
-            <li class="list-group-item">
-                <img class="userImageList" src="../../../images/user1.jpg">
-                &nbsp;Hassan
-            </li>
-            <li class="list-group-item">
-                <h2>Members</h2>
-            </li>
-            <li class="list-group-item">
-                <img class="userImageList" src="../../../images/user2.jpg">
-                &nbsp;Chris
-            </li>
-            <li class="list-group-item">
-                <img class="userImageList" src="../../../images/user3.jpg">
-                &nbsp;Daniel
-            </li>
-            <li class="list-group-item">
-                <img class="userImageList" src="../../../images/user4.jpg">
-                &nbsp;Mhammad
-            </li>
-            <li class="list-group-item">
-                <img class="userImageList" src="../../../images/user5.jpg">
-                &nbsp;Houssam
-            </li>
-        </ul>
+        <div id="chessClubBody">
+            <div id="backGroundContainer">
+                <div id="backGround"></div>
+            </div>
+            <div id="chessClubRightLeftContainer">
+                <div id="leftSide">
+                    <h5>Upcoming Events!</h5>
+                    <ul>
+                        <li>Call of duty tournament</li>
+                    </ul>
+                </div>
+                <div id="rightSide">
+                    <div id="form">
+                        <input placeholder="announce Something to your class" id="messageInput" type="text">
+                        <button id="sendAnnouncementButton" onClick="createBook()" type="submit">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <div id="renderContent"></div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+        <script src="../../scripts/sendAnnouncements.js"></script>
     </body>
 </html>
