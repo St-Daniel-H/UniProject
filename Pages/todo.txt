@@ -1,0 +1,2 @@
+1- Add login page that only allows email daniel@email.com witht the password
+2- Add a footer in main page.

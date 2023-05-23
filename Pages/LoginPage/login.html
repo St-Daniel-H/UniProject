@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Log In</title>
+        <link rel="stylesheet" href="login.css">
+    </head>
+    <body>
+        <h1>Welcome to LIU club house!</h1>
+        <div id="formContainer">
+            <form>
+                <label for="email">Email*</label>
+                <br>
+                <input id="email">
+                <br>
+                <br>
+                <label for="password">Password*</label>
+                <br>
+                <input type="password" id="password">
+                <br>
+                <br>
+                <p id="alert" class="hidden">Wrong email or password</p>
+                <button type="button" onclick="login()" id="submit">
+                    <b>Log in</b>
+                </button>
+            </form>
+        </div>
+    </body>
+    <script>
+        function login(){
+          var email = document.getElementById("email").value;
+          var password = document.getElementById("password").value;
+          if(email == "daniel@email.com" && password == "1234"){
+            window.location.replace('../mainPage/index.html');
+          }else{
+            document.getElementById("alert").classList.remove("hidden")
+          }
+        }
+    </script>
+</html>

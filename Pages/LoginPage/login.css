@@ -1,0 +1,63 @@
+body{
+    background: URL("../../images/loginBackGround.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+h1{
+    margin-left:20px;
+}
+#formContainer{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    max-width:500px;
+    width:100%;
+    padding:10px;
+    -webkit-box-shadow: -1px 0 9.5px 6.5px #dddddd;
+    -moz-box-shadow: -1px 0 9.5px 6.5px #dddddd;
+    box-shadow: -1px 0 9.5px 6.5px #dddddd; 
+    border-radius: 10px;
+    background-color: white;
+}
+form{
+    padding:10px;
+    position:relative;
+    height:200px;
+}
+#email, #password{
+    width:100%;
+    color: black;
+    height: 28px;
+    padding-left: 10px;
+    text-decoration: none;
+    background-color: rgb(208, 208, 208);
+    border-radius: 5px; /*up to date browsers support this, but you can add prefixes if you want*/
+
+    border: 0;
+}
+#submit{
+    background-color: yellow;
+    height:40px;
+    width:60px;
+    border:none;
+    border-radius:10px;
+    position: absolute;
+    bottom:0;
+    right:0;
+    cursor:pointer;
+    transition:0.5s;
+}
+#submit:hover{
+    background-color: pink;
+    color:white;
+}
+.hidden{
+    display:none;
+}
+#alert{
+    color:red;
+}
