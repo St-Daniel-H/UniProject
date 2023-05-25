@@ -1,9 +1,19 @@
 body{
-    background: URL("../../images/loginBackGround.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background:
+    conic-gradient(at 10% 50%,#0000 75%,#b5b5b5 0),
+    conic-gradient(at 10% 50%,#0000 75%,#b5b5b5 0) calc(1*100px) calc(3*100px),
+    conic-gradient(at 10% 50%,#0000 75%,#b5b5b5 0) calc(2*100px) calc(1*100px),
+    conic-gradient(at 10% 50%,#0000 75%,#b5b5b5 0) calc(3*100px) calc(4*100px),
+    conic-gradient(at 10% 50%,#0000 75%,#b5b5b5 0) calc(4*100px) calc(2*100px),
+    conic-gradient(at 50% 10%,#0000 75%,#b5b5b5 0) 0 calc(4*100px),
+    conic-gradient(at 50% 10%,#0000 75%,#b5b5b5 0) calc(1*100px) calc(2*100px),
+    conic-gradient(at 50% 10%,#0000 75%,#b5b5b5 0) calc(2*100px) 0,
+    conic-gradient(at 50% 10%,#0000 75%,#b5b5b5 0) calc(3*100px) calc(3*100px),
+    conic-gradient(at 50% 10%,#0000 75%,#b5b5b5 0) calc(4*100px) calc(1*100px),
+    #8c8c8c;
+background-size: 500px 500px;
+margin:0;
+padding:0;
 }
 h1{
     margin-left:20px;
@@ -40,7 +50,7 @@ form{
     border: 0;
 }
 #submit{
-    background-color: yellow;
+    background-color: rgb(232, 232, 232);
     height:40px;
     width:60px;
     border:none;
@@ -52,7 +62,7 @@ form{
     transition:0.5s;
 }
 #submit:hover{
-    background-color: pink;
+    background-color: gray;
     color:white;
 }
 .hidden{
@@ -60,4 +70,23 @@ form{
 }
 #alert{
     color:red;
+}
+#loginTop{
+    width:100%;
+    height:70px;   
+    border-bottom:2px solid rgb(201, 201, 201);
+    -webkit-box-shadow: 3px 3px 10px 3px #757575;
+    -moz-box-shadow: 3px 3px 10px 3px #757575;
+    box-shadow: 3px 3px 10px 3px #757575;
+    display:flex;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    position:fixed;
+    z-index: 2;
+    top:0;
+    background-color: white;
+}
+#loginTop h2{
+    margin-left:2rem;
 }
